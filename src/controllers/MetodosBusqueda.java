@@ -8,6 +8,7 @@ public class MetodosBusqueda {
     public MetodosBusqueda(Persona[] personas) {
         showConsole = new ShowConsole();
         this.personas = personas;
+        showPersonByCode();
     }
 
     public int busquedaLineal(int[] array, int elemento) {
@@ -30,7 +31,7 @@ public class MetodosBusqueda {
         return -1;
     }
 
-    public void showPersonByCode(int code){
+    public void showPersonByCode(){
         int codeToFince=showConsole.getCode();
         int indexPerson = findPersonByCode(codeToFince);
         if (indexPerson != -1) {
