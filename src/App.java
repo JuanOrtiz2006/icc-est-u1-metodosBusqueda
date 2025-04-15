@@ -1,16 +1,19 @@
 import controllers.MetodosBusqueda;
-
+import models.Persona;
 public class App {
     public static void main(String[] args) throws Exception {
 
         // Crear una instancia de la clase MetodosBusqueda
-        MetodosBusqueda metodosBusqueda = new MetodosBusqueda();
-        
-        // Crear un array de ejemplo
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        
-        // Realizar una búsqueda lineal
-        metodosBusqueda.busquedaLineal(array, 5);
+        Persona[] personas = new Persona[7];
+        personas[0] = new Persona(101, "Juan");
+        personas[1] = new Persona(102, "Maria");
+        personas[2] = new Persona(103, "Carlos");
+        personas[3] = new Persona(104, "Ana");
+        personas[4] = new Persona(105, "Luis");
+        personas[5] = new Persona(106, "Sofia");
+        personas[6] = new Persona(107, "Pedro");
+
+        MetodosBusqueda metodosBusqueda = new MetodosBusqueda(personas);
     }
 
 }
