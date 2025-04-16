@@ -11,15 +11,6 @@ public class MetodosBusqueda {
         showPersonByCode();
     }
 
-    public int busquedaLineal(int[] array, int elemento) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == elemento) {
-                return i; 
-            }
-        }
-        return -1;
-    }
-
     public int findPersonByCode(int code){
         int cont=0;
         for (Persona persona : personas) {
@@ -32,12 +23,14 @@ public class MetodosBusqueda {
     }
 
     public void showPersonByCode(){
-        int codeToFince=showConsole.getCode();
-        int indexPerson = findPersonByCode(codeToFince);
+        int codeToFinde=showConsole.getCode();
+        int indexPerson = findPersonByCode(codeToFinde);
         if (indexPerson != -1) {
+            showConsole.showMessage("Posicion: " + indexPerson);
             showConsole.showMessage("Persona encontrada: " + personas[indexPerson]);
         } else {
             showConsole.showMessage("Persona no encontrada.");
         }
     }
+
 }
